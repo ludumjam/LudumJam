@@ -3,22 +3,29 @@ using System.Collections.Generic;
 
 public class LevelSpawner : MonoBehaviour {
 
-    public float sequenceTriggerDistance;
-    public string startSequence;
+    public int sequenceTriggerTicks = 50;
 
-    private LevelSequence currentSequence;
+    private int currentSequence;
+    private LevelSequence[] sequences;
     private float spawnTrigger;
     private float cameraHeight;
+    private int sequenceTrigger;
 
     void Start() {
         spawnTrigger = CameraY() - 1f;
-        currentSequence = GetSequence(startSequence);
+        sequences = GetComponents<LevelSequence>();
     }
 
     void Update() {
         if (CameraY() < spawnTrigger) {
             spawnTrigger = CameraY() - 1f;
-            currentSequence.Tick();
+            sequences[currentSequence].Tick();
+            sequenceTrigger++;
+            if (sequenceTrigger > sequenceTriggerTicks) {
+                sequenceTrigger = 0;
+                currentSequence++;
+                currentSequence = currentSequence >= sequences.Length ? 0 : currentSequence;
+            }
         }
     }
 

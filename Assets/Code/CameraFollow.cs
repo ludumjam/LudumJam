@@ -51,7 +51,7 @@ public class CameraFollow : MonoBehaviour {
     {
         if (!isShaking)
         {
-            cameraShakeRoutine = StartCoroutine(CameraShake(intensity, duration));
+            //cameraShakeRoutine = StartCoroutine(CameraShake(intensity, duration));
         }
     }
 
