@@ -14,9 +14,9 @@ public class WallElement : MonoBehaviour, Obstacle {
         int r = Random.Range(0, 2);
 
         if (r == 0) {
-            transform.Translate(new Vector3(17f, 0, 0));
+            transform.Translate(new Vector3(7f, 0, 0));
         } else {
-            transform.Translate(new Vector3(-17f, 0, 0));
+            transform.Translate(new Vector3(-7f, 0, 0));
         }
 
         transform.Rotate(new Vector3(0, 0, Random.Range(0, 360)));
