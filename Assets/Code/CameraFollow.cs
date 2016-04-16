@@ -3,9 +3,13 @@ using System.Collections;
 
 public class CameraFollow : MonoBehaviour {
 
+    public float deathOffset = 6f;
     public float maxDistanceToPlayer = 1f;
     public float speed = 0.2f;
     private float currentYVelocity = 0f;
+
+    public delegate void OnDeathEvent();
+    public static OnDeathEvent OnPlayerWentOutsideScreen;
 
     void FixedUpdate() {
         float x = transform.position.x;
@@ -25,5 +29,13 @@ public class CameraFollow : MonoBehaviour {
             newPosition.y -= speed;
         }
         transform.position = newPosition;
+
+        if (Character.currentChild.transform.position.y > transform.position.y + deathOffset)
+        {
+            if (OnPlayerWentOutsideScreen != null)
+            {
+                OnPlayerWentOutsideScreen();
+            }
+        }
     }
 }
