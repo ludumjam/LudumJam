@@ -32,11 +32,12 @@ public class Character : MonoBehaviour
     {
         GameObject previousChild = currentChild;
         Vector3 newPosition = previousChild.transform.position;
+        Vector2 newVelocity = previousChild.GetComponent<Rigidbody2D>().velocity;
         previousChild.SetActive(false);
         currentChild = (direction == Shift.Previous) ? GetPreviousChild() : GetNextChild();
         currentChild.transform.position = newPosition;
-        currentChild.GetComponent<Rigidbody>().velocity = previousChild.GetComponent<Rigidbody>().velocity;
         currentChild.SetActive(true);
+        currentChild.GetComponent<Rigidbody2D>().velocity = newVelocity;
     }
 
     private GameObject GetNextChild()
