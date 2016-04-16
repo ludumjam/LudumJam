@@ -18,6 +18,13 @@ public class UIController : MonoBehaviour
         CameraFollow.OnPlayerWentOutsideScreen += HandleOnDeathEvent;
         retryButton.onClick.AddListener(HandleRetryButtonOnClick);
         Character.OnPlayerShapeShift += HandleShapeShiftEvent;
+        
+        for (int i = 0; i < shapes.Length; i++)
+        {
+            Color tempColor = shapes[i].color;
+            tempColor.a = (i == 0) ? 1f : 0f;
+            shapes[i].color = tempColor;
+        }
     }
 
     void HandleShapeShiftEvent (int index, int previousIndex)
