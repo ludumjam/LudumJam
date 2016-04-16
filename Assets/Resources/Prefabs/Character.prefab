@@ -28,8 +28,8 @@ GameObject:
   - 50: {fileID: 5003196}
   - 114: {fileID: 11429028}
   - 58: {fileID: 5848350}
-  - 95: {fileID: 9581734}
   - 114: {fileID: 11441718}
+  - 95: {fileID: 9583814}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -111,6 +111,7 @@ GameObject:
   - 95: {fileID: 9599136}
   - 114: {fileID: 11415674}
   - 114: {fileID: 11451114}
+  - 114: {fileID: 11445370}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -443,7 +444,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!95 &9581734
+--- !u!95 &9583814
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -565,9 +566,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - {fileID: 125888}
+  - {fileID: 122926}
   - {fileID: 103704}
   - {fileID: 111046}
-  - {fileID: 122926}
+--- !u!114 &11445370
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aa4c2c6d0f984ff39825af5ad0f7d06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownTime: 3
+  duration: 0.4
+  downForce: 50
 --- !u!114 &11451114
 MonoBehaviour:
   m_ObjectHideFlags: 1
