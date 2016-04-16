@@ -14,7 +14,7 @@ public class LevelSequence : MonoBehaviour {
         InitObstacleTriggers();
 
 
-        camHeight = Camera.main.orthographicSize * 2f;
+        camHeight = Camera.main.orthographicSize * 4f;
         activeObstacles = new List<Transform>();
     }
 
