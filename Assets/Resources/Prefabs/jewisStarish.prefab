@@ -1,85 +1,70 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &103614
+--- !u!1 &131452
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 478204}
-  - 212: {fileID: 21225110}
-  - 114: {fileID: 11480342}
-  - 50: {fileID: 5094214}
-  - 61: {fileID: 6176300}
+  - 4: {fileID: 445896}
+  - 212: {fileID: 21273658}
+  - 60: {fileID: 6061590}
   m_Layer: 0
-  m_Name: SquareObstacle
+  m_Name: jewisStarish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &478204
+--- !u!4 &445896
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 103614}
+  m_GameObject: {fileID: 131452}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.11, y: -42.875298, z: 0}
+  m_LocalPosition: {x: -9.097223, y: -32.525963, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!50 &5094214
-Rigidbody2D:
-  serializedVersion: 2
+--- !u!60 &6061590
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 103614}
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 5
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!61 &6176300
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 103614}
+  m_GameObject: {fileID: 131452}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 1.28, y: 1.28}
---- !u!114 &11480342
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 103614}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cde321459ca24245a47b3e4ec7366a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  frequency: 10
---- !u!212 &21225110
+  m_Points:
+    m_Paths:
+    - - {x: 0.361928, y: 0.15261841}
+      - {x: 0.36241627, y: 0.36214828}
+      - {x: 0.14948368, y: 0.36192703}
+      - {x: -0.0008649826, y: 0.5126877}
+      - {x: -0.1499672, y: 0.36200333}
+      - {x: -0.36168098, y: 0.36187363}
+      - {x: -0.3620186, y: 0.14967728}
+      - {x: -0.51289654, y: -0.00045776367}
+      - {x: -0.3594427, y: -0.1539917}
+      - {x: -0.36241722, y: -0.3639412}
+      - {x: -0.14925385, y: -0.3625145}
+      - {x: 0.00083351135, y: -0.51200104}
+      - {x: 0.15043831, y: -0.36130905}
+      - {x: 0.36241627, y: -0.36214447}
+      - {x: 0.36255646, y: -0.14979935}
+      - {x: 0.5128956, y: 0.00008392334}
+--- !u!212 &21273658
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 103614}
+  m_GameObject: {fileID: 131452}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -100,7 +85,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ac0e7720b3a779843a7c7d868c222696, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 059bbfd5ea70e774b85407ac1ef183af, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -113,5 +98,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 103614}
+  m_RootGameObject: {fileID: 131452}
   m_IsPrefabParent: 1
