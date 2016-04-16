@@ -29,8 +29,6 @@ public class LevelSequence : MonoBehaviour {
                 SpawnObstacle(obstacleGO);
             }
         }
-
-        Debug.Log("tick");
     }
 
     private void SpawnObstacle(GameObject obstacle) {
