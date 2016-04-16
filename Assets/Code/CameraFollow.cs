@@ -29,5 +29,13 @@ public class CameraFollow : MonoBehaviour {
         } else {
             transform.Translate(new Vector3(0, -charMove, 0));
         }
+
+        if (CharY() > transform.position.y + deathOffset)
+        {
+            if (OnPlayerWentOutsideScreen != null)
+            {
+                OnPlayerWentOutsideScreen();
+            }
+        }
     }
 }
