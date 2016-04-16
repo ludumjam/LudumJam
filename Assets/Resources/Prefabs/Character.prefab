@@ -72,6 +72,7 @@ GameObject:
   - 60: {fileID: 6042962}
   - 95: {fileID: 9549332}
   - 114: {fileID: 11480210}
+  - 114: {fileID: 11472872}
   m_Layer: 0
   m_Name: Triangle
   m_TagString: Untagged
@@ -704,6 +705,20 @@ MonoBehaviour:
   forceModifier: 0.5
   screenShakeIntensity: 1
   screenShakeDuration: 0.2
+--- !u!114 &11472872
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 122926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 507562b319fab4dfeb4c65e89b1b807f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownTime: 3
+  duration: 4
+  scaleMultiplier: 0.5
 --- !u!114 &11478028
 MonoBehaviour:
   m_ObjectHideFlags: 1
