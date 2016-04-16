@@ -1,0 +1,216 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &125188
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 402632}
+  - 212: {fileID: 21254242}
+  - 60: {fileID: 6085614}
+  - 50: {fileID: 5046626}
+  - 233: {fileID: 23385454}
+  - 114: {fileID: 11411618}
+  m_Layer: 0
+  m_Name: logSprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &402632
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125188}
+  m_LocalRotation: {x: 0, y: 0, z: 0.22375815, w: -0.9746447}
+  m_LocalPosition: {x: -31.22, y: -32.621, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!50 &5046626
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125188}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!60 &6085614
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125188}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -0.124000005, y: -0.342}
+      - {x: -0.11800001, y: -0.32000002}
+      - {x: -0.08400001, y: -0.32200003}
+      - {x: -0.078, y: -0.3}
+      - {x: -0.044000003, y: -0.30200002}
+      - {x: -0.006, y: -0.282}
+      - {x: 0.002, y: -0.26200002}
+      - {x: 0.040000003, y: -0.25800002}
+      - {x: 0.074, y: -0.24200001}
+      - {x: 0.082, y: -0.22200002}
+      - {x: 0.116000004, y: -0.22000001}
+      - {x: 0.12200001, y: -0.202}
+      - {x: 0.162, y: -0.19800001}
+      - {x: 0.19600001, y: -0.18400002}
+      - {x: 0.208, y: -0.16800001}
+      - {x: 0.24400002, y: -0.15400001}
+      - {x: 0.31800002, y: -0.120000005}
+      - {x: 0.324, y: -0.1}
+      - {x: 0.354, y: -0.106000006}
+      - {x: 0.39600003, y: -0.076000005}
+      - {x: 0.44400004, y: -0.054}
+      - {x: 0.48200002, y: -0.014}
+      - {x: 0.5, y: 0.022000002}
+      - {x: 0.5, y: 0.178}
+      - {x: 0.48200002, y: 0.178}
+      - {x: 0.48000002, y: 0.23}
+      - {x: 0.47400004, y: 0.23600002}
+      - {x: 0.46400002, y: 0.272}
+      - {x: 0.448, y: 0.284}
+      - {x: 0.43600002, y: 0.32200003}
+      - {x: 0.404, y: 0.354}
+      - {x: 0.354, y: 0.39600003}
+      - {x: 0.314, y: 0.416}
+      - {x: 0.21000001, y: 0.42000002}
+      - {x: 0.20400001, y: 0.39800003}
+      - {x: 0.17, y: 0.4}
+      - {x: 0.164, y: 0.37800002}
+      - {x: 0.098000005, y: 0.4}
+      - {x: 0.014, y: 0.43600002}
+      - {x: -0.006, y: 0.45600003}
+      - {x: -0.056, y: 0.45600003}
+      - {x: -0.1, y: 0.41400003}
+      - {x: -0.09, y: 0.38000003}
+      - {x: -0.016, y: 0.30600002}
+      - {x: -0.028, y: 0.3}
+      - {x: -0.036000002, y: 0.28}
+      - {x: -0.068, y: 0.28}
+      - {x: -0.080000006, y: 0.266}
+      - {x: -0.128, y: 0.25}
+      - {x: -0.15400001, y: 0.23600002}
+      - {x: -0.16000001, y: 0.22200002}
+      - {x: -0.2, y: 0.21400002}
+      - {x: -0.24000001, y: 0.194}
+      - {x: -0.268, y: 0.178}
+      - {x: -0.312, y: 0.158}
+      - {x: -0.35000002, y: 0.134}
+      - {x: -0.39200002, y: 0.11800001}
+      - {x: -0.43, y: 0.094000004}
+      - {x: -0.45400003, y: 0.076000005}
+      - {x: -0.47400004, y: 0.056}
+      - {x: -0.49400002, y: 0.010000001}
+      - {x: -0.49400002, y: -0.134}
+      - {x: -0.48200002, y: -0.14600001}
+      - {x: -0.47200003, y: -0.20600002}
+      - {x: -0.45800003, y: -0.23400001}
+      - {x: -0.44200003, y: -0.246}
+      - {x: -0.43, y: -0.284}
+      - {x: -0.39800003, y: -0.314}
+      - {x: -0.37800002, y: -0.33600003}
+      - {x: -0.34800002, y: -0.358}
+      - {x: -0.30800003, y: -0.37800002}
+      - {x: -0.202, y: -0.37800002}
+      - {x: -0.19800001, y: -0.36}
+      - {x: -0.164, y: -0.36200002}
+      - {x: -0.158, y: -0.34}
+--- !u!114 &11411618
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cde321459ca24245a47b3e4ec7366a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frequency: 5
+--- !u!212 &21254242
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125188}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_ReflectionProbeUsage: 0
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 3e2d613017cdb7845ac32577b951ca10, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+--- !u!233 &23385454
+HingeJoint2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125188}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: -0.5, y: -0.15}
+  m_ConnectedAnchor: {x: -31.72, y: -32.55}
+  m_UseMotor: 1
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+  m_UseLimits: 0
+  m_AngleLimits:
+    m_LowerAngle: 0
+    m_UpperAngle: 359
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 125188}
+  m_IsPrefabParent: 1

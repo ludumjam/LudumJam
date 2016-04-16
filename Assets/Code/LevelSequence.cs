@@ -11,11 +11,11 @@ public class LevelSequence : MonoBehaviour {
     private float camHeight;
 
     void Start () {
+        activeObstacles = new List<Transform>();
         InitObstacleTriggers();
 
 
         camHeight = Camera.main.orthographicSize * 4f;
-        activeObstacles = new List<Transform>();
     }
 
     private void InitObstacleTriggers() {
@@ -24,7 +24,7 @@ public class LevelSequence : MonoBehaviour {
             GameObject obstacleGO = obstacles[i];
             Obstacle obstacle = obstacleGO.GetComponent<Obstacle>();
             int freq = obstacle == null ? 10 : obstacle.GetFrequency();
-            obstacleTriggers[i] = Random.Range(0, obstacle.GetFrequency());
+            obstacleTriggers[i] = Random.Range(0, freq);
         }
     }
 
