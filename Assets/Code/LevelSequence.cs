@@ -61,7 +61,7 @@ public class LevelSequence : MonoBehaviour {
 
         List<Transform> marked = new List<Transform>();
         foreach (Transform t in activeObstacles) {
-            if (t.position.y > camY + camHeight) {
+            if (t.position.y > camY + camHeight || t.position.y < camY - camHeight*2) {
                 marked.Add(t);
             }
         }
