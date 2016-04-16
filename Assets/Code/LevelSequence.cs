@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
-using System;
 
 public class LevelSequence : MonoBehaviour {
 
@@ -12,9 +11,21 @@ public class LevelSequence : MonoBehaviour {
     private float camHeight;
 
     void Start () {
-        obstacleTriggers = new int[obstacles.Length];
+        InitObstacleTriggers();
+
+
         camHeight = Camera.main.orthographicSize * 2f;
         activeObstacles = new List<Transform>();
+    }
+
+    private void InitObstacleTriggers() {
+        obstacleTriggers = new int[obstacles.Length];
+        for (int i = 0; i < obstacleTriggers.Length; i++) {
+            GameObject obstacleGO = obstacles[i];
+            Obstacle obstacle = obstacleGO.GetComponent<Obstacle>();
+            int freq = obstacle == null ? 10 : obstacle.GetFrequency();
+            obstacleTriggers[i] = Random.Range(0, obstacle.GetFrequency());
+        }
     }
 
     internal void Tick() {
@@ -25,7 +36,7 @@ public class LevelSequence : MonoBehaviour {
             int freq = obstacle == null ? 10 : obstacle.GetFrequency();
 
             if (obstacleTriggers[i] >= freq) {
-                obstacleTriggers[i] = 0;
+                obstacleTriggers[i] = Random.Range(-freq/2, freq/2);
                 SpawnObstacle(obstacleGO);
             }
         }
