@@ -13,6 +13,17 @@ public class Character : MonoBehaviour
     {
         currentChild = children[0];
         currentChild.SetActive(true);
+        CameraFollow.OnPlayerWentOutsideScreen += HandleOnDeathEvent;
+    }
+
+    void HandleOnDeathEvent ()
+    {
+        enabled = false;
+    }
+
+    void OnDestroy()
+    {
+        CameraFollow.OnPlayerWentOutsideScreen -= HandleOnDeathEvent;
     }
 
     // Update is called once per frame

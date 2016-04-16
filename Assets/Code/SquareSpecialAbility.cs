@@ -15,6 +15,17 @@ public class SquareSpecialAbility : MonoBehaviour
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+        CameraFollow.OnPlayerWentOutsideScreen += HandleOnDeathEvent;
+    }
+
+    void HandleOnDeathEvent()
+    {
+        enabled = false;
+    }
+
+    void OnDestroy()
+    {
+        CameraFollow.OnPlayerWentOutsideScreen -= HandleOnDeathEvent;
     }
 
     void Update()
