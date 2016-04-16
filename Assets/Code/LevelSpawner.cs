@@ -5,7 +5,6 @@ using System;
 
 public class LevelSpawner : MonoBehaviour {
 
-    public Transform player;
     public Transform mainCamera;
     public float triggerDistance;
 
@@ -14,13 +13,13 @@ public class LevelSpawner : MonoBehaviour {
     private List<Transform> activeObstacles;
 
     void Start() {
-        spawnTrigger = player.position.y - triggerDistance;
+        spawnTrigger = Character.currentChild.transform.position.y - triggerDistance;
         cameraHeight = mainCamera.GetComponent<Camera>().orthographicSize * 2f;
         activeObstacles = new List<Transform>();
     }
 
     void Update() {
-        float y = player.transform.position.y;
+        float y = Character.currentChild.transform.transform.position.y;
 
         if (y < spawnTrigger) {
             spawnTrigger = y - triggerDistance;
@@ -45,7 +44,7 @@ public class LevelSpawner : MonoBehaviour {
 
         GameObject go = (GameObject) Instantiate(Resources.Load("Prefabs/SquareObstacle"));
 
-        float fallDistance = player.transform.position.y;
+        float fallDistance = Character.currentChild.transform.transform.position.y;
         go.transform.position = new Vector3(0, fallDistance - cameraHeight, 0);
         Obstacle obst = go.GetComponent<Obstacle>();
         if (obst != null) {

@@ -5,7 +5,7 @@ public class Character : MonoBehaviour
 {
     public GameObject[] children;
     private int childIndex = 0;
-    private GameObject currentChild;
+    public static GameObject currentChild;
 
     private enum Shift {Next, Previous};
 
