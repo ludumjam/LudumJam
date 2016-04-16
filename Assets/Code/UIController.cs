@@ -9,6 +9,7 @@ public class UIController : MonoBehaviour
     public GameObject gameOverPanel;
     public Button retryButton;
     public Text distanceText;
+    public Image[] shapes;
 
     // Use this for initialization
     void Start()
@@ -16,6 +17,24 @@ public class UIController : MonoBehaviour
         gameOverPanel.SetActive(false);
         CameraFollow.OnPlayerWentOutsideScreen += HandleOnDeathEvent;
         retryButton.onClick.AddListener(HandleRetryButtonOnClick);
+        Character.OnPlayerShapeShift += HandleShapeShiftEvent;
+        
+        for (int i = 0; i < shapes.Length; i++)
+        {
+            Color tempColor = shapes[i].color;
+            tempColor.a = (i == 0) ? 1f : 0f;
+            shapes[i].color = tempColor;
+        }
+    }
+
+    void HandleShapeShiftEvent (int index, int previousIndex)
+    {
+        Color tempColor = shapes[index].color;
+        tempColor.a = 1f;
+        shapes[index].color = tempColor;
+        tempColor = shapes[previousIndex].color;
+        tempColor.a = 0f;
+        shapes[previousIndex].color = tempColor;
     }
 
     void FixedUpdate()
@@ -36,5 +55,6 @@ public class UIController : MonoBehaviour
     void OnDestroy()
     {
         CameraFollow.OnPlayerWentOutsideScreen -= HandleOnDeathEvent;
+        Character.OnPlayerShapeShift -= HandleShapeShiftEvent;
     }
 }

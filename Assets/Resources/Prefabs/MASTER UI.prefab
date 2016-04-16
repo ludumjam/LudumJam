@@ -454,7 +454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.91609, g: 1, b: 0.14705884, a: 1}
+  m_Color: {r: 0.91609, g: 1, b: 0.14705884, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -573,6 +573,11 @@ MonoBehaviour:
   gameOverPanel: {fileID: 147374}
   retryButton: {fileID: 11403926}
   distanceText: {fileID: 11442896}
+  shapes:
+  - {fileID: 11467198}
+  - {fileID: 11418268}
+  - {fileID: 11457124}
+  - {fileID: 11446952}
 --- !u!114 &11434610
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -710,7 +715,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.15272613, g: 0.12456743, b: 0.9411765, a: 1}
+  m_Color: {r: 0.15272613, g: 0.12456743, b: 0.9411765, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -751,7 +756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.24137926, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.24137926, g: 1, b: 0, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -832,7 +837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9411765, g: 0.12456748, b: 0.12456748, a: 1}
+  m_Color: {r: 0.9411765, g: 0.12456748, b: 0.12456748, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

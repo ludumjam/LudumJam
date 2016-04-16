@@ -10,6 +10,9 @@ public class Character : MonoBehaviour
 
     private enum Shift {Next, Previous};
 
+    public delegate void ShapeShiftEvent(int index, int previousIndex);
+    public static ShapeShiftEvent OnPlayerShapeShift;
+
     void Start()
     {
         currentChild = children[0];
@@ -52,10 +55,16 @@ public class Character : MonoBehaviour
         Vector3 newPosition = previousChild.transform.position;
         Vector2 newVelocity = previousChild.GetComponent<Rigidbody2D>().velocity;
         previousChild.SetActive(false);
+        int previousIndex = childIndex;
         currentChild = (direction == Shift.Previous) ? GetPreviousChild() : GetNextChild();
         currentChild.transform.position = newPosition;
         currentChild.SetActive(true);
         currentChild.GetComponent<Rigidbody2D>().velocity = newVelocity;
+
+        if (OnPlayerShapeShift != null)
+        {
+            OnPlayerShapeShift(childIndex, previousIndex);
+        }
     }
 
     private GameObject GetNextChild()
