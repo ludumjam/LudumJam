@@ -3,9 +3,9 @@ using System.Collections;
 using UnityEngine.Assertions;
 
 [RequireComponent(typeof(Rigidbody))]
-public class Character : MonoBehaviour {
+public class CharacterMovement : MonoBehaviour {
 
-	public float forceModifier = 1f;
+	public float forceModifier = 0.5f;
 	private new Rigidbody rigidbody;
 
 	// Use this for initialization
