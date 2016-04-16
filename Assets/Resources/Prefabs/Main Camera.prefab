@@ -61,7 +61,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 107502}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10, y: 0, z: 10}
+  m_LocalPosition: {x: -4.3, y: 0.09, z: 10}
   m_LocalScale: {x: 2.3316305, y: 28.262533, z: 1}
   m_Children: []
   m_Father: {fileID: 429602}
@@ -87,7 +87,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 119568}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: 0, z: 10}
+  m_LocalPosition: {x: 4.3, y: 0, z: 10}
   m_LocalScale: {x: 2.3316305, y: 28.262533, z: 1}
   m_Children: []
   m_Father: {fileID: 429602}
@@ -101,7 +101,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0.019607844}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathOffset: 6
   maxDistanceToPlayer: 1
-  speed: 0.1
+  speed: 1
 --- !u!124 &12458152
 Behaviour:
   m_ObjectHideFlags: 1
