@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Controller : MonoBehaviour {
 
-    public float gravity = 10f;
+    public float gravity = Physics2D.gravity.y;
     public float controlForce = 20f;
 
     void Start() {
