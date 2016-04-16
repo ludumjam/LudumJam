@@ -6,6 +6,7 @@ public class Character : MonoBehaviour
     public GameObject[] children;
     private int childIndex = 0;
     public static GameObject currentChild;
+    public static float greatestDistanceAchieved = 0f;
 
     private enum Shift {Next, Previous};
 
@@ -14,6 +15,7 @@ public class Character : MonoBehaviour
         currentChild = children[0];
         currentChild.SetActive(true);
         CameraFollow.OnPlayerWentOutsideScreen += HandleOnDeathEvent;
+        greatestDistanceAchieved = 0f;
     }
 
     void HandleOnDeathEvent ()
@@ -37,6 +39,11 @@ public class Character : MonoBehaviour
         {
             ShapeShift(Shift.Next);
         }
+    }
+
+    void FixedUpdate()
+    {
+        greatestDistanceAchieved = Mathf.Max(Mathf.Abs(currentChild.transform.position.y), greatestDistanceAchieved);
     }
 
     private void ShapeShift(Shift direction)

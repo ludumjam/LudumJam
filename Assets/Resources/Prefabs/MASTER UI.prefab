@@ -572,6 +572,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverPanel: {fileID: 147374}
   retryButton: {fileID: 11403926}
+  distanceText: {fileID: 11442896}
 --- !u!114 &11434610
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1079,7 +1080,6 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0

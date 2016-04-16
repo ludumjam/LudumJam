@@ -8,6 +8,7 @@ public class UIController : MonoBehaviour
 
     public GameObject gameOverPanel;
     public Button retryButton;
+    public Text distanceText;
 
     // Use this for initialization
     void Start()
@@ -15,6 +16,11 @@ public class UIController : MonoBehaviour
         gameOverPanel.SetActive(false);
         CameraFollow.OnPlayerWentOutsideScreen += HandleOnDeathEvent;
         retryButton.onClick.AddListener(HandleRetryButtonOnClick);
+    }
+
+    void FixedUpdate()
+    {
+        distanceText.text = Character.greatestDistanceAchieved.ToString();
     }
 
     void HandleOnDeathEvent()
