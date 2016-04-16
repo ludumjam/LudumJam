@@ -109,9 +109,7 @@ GameObject:
   - 61: {fileID: 6106762}
   - 114: {fileID: 11402342}
   - 95: {fileID: 9599136}
-  - 114: {fileID: 11415674}
   - 114: {fileID: 11451114}
-  - 114: {fileID: 11445370}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -308,7 +306,7 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 122926}
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -325,7 +323,7 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 125888}
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -359,7 +357,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 103704}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: b78123678747340479558449bcb7dc44, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -373,7 +371,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 122926}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e407c3f2e8f632b47833bcbdef7866cf, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -390,7 +388,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 125888}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f45820cc68869794da8a88be0d3f2f7c, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -404,7 +402,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 111046}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 50a0a4dbbf15834448425386b349191f, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: -0.00583148}
@@ -490,22 +488,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldownTime: 3
-  duration: 0.4
-  downForce: 50
---- !u!114 &11415674
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 125888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1aa4c2c6d0f984ff39825af5ad0f7d06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooldownTime: 3
-  duration: 0.4
-  downForce: 50
+  duration: 0.3
+  downForce: 15
 --- !u!114 &11429028
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -569,20 +553,6 @@ MonoBehaviour:
   - {fileID: 122926}
   - {fileID: 103704}
   - {fileID: 111046}
---- !u!114 &11445370
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 125888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1aa4c2c6d0f984ff39825af5ad0f7d06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooldownTime: 3
-  duration: 0.4
-  downForce: 50
 --- !u!114 &11451114
 MonoBehaviour:
   m_ObjectHideFlags: 1
