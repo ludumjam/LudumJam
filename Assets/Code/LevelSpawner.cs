@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using System;
 
 public class LevelSpawner : MonoBehaviour {
@@ -10,10 +11,12 @@ public class LevelSpawner : MonoBehaviour {
 
     private float spawnTrigger;
     private float cameraHeight;
+    private List<Transform> activeObstacles;
 
     void Start() {
         spawnTrigger = player.position.y - triggerDistance;
         cameraHeight = mainCamera.GetComponent<Camera>().orthographicSize * 2f;
+        activeObstacles = new List<Transform>();
     }
 
     void Update() {
@@ -23,6 +26,19 @@ public class LevelSpawner : MonoBehaviour {
             spawnTrigger = y - triggerDistance;
             SpawnObstacle();
         }
+
+        List<Transform> marked = new List<Transform>();
+        foreach (Transform t in activeObstacles) {
+            if (t.position.y > y + cameraHeight) {
+                marked.Add(t);
+            }
+        }
+
+        foreach (Transform t in marked) {
+            activeObstacles.Remove(t);
+            Destroy(t.gameObject);
+        }
+
     }
 
     private void SpawnObstacle() {
@@ -35,6 +51,8 @@ public class LevelSpawner : MonoBehaviour {
         if (obst != null) {
             obst.Spawn();
         }
+
+        activeObstacles.Add(go.transform);
 
     }
 }
