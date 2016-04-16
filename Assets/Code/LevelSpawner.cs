@@ -1,58 +1,43 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
-using System;
 
 public class LevelSpawner : MonoBehaviour {
 
-    public Transform player;
-    public Transform mainCamera;
-    public float triggerDistance;
+    public float sequenceTriggerDistance;
+    public string startSequence;
 
+    private LevelSequence currentSequence;
     private float spawnTrigger;
     private float cameraHeight;
-    private List<Transform> activeObstacles;
 
     void Start() {
-        spawnTrigger = player.position.y - triggerDistance;
-        cameraHeight = mainCamera.GetComponent<Camera>().orthographicSize * 2f;
-        activeObstacles = new List<Transform>();
+        spawnTrigger = CameraY() - 1f;
+        currentSequence = GetSequence(startSequence);
     }
 
     void Update() {
-        float y = player.transform.position.y;
-
-        if (y < spawnTrigger) {
-            spawnTrigger = y - triggerDistance;
-            SpawnObstacle();
+        if (CameraY() < spawnTrigger) {
+            spawnTrigger = CameraY() - 1f;
+            currentSequence.Tick();
         }
+    }
 
-        List<Transform> marked = new List<Transform>();
-        foreach (Transform t in activeObstacles) {
-            if (t.position.y > y + cameraHeight) {
-                marked.Add(t);
+    float CameraY() {
+        return Camera.main.transform.position.y;
+    }
+
+    LevelSequence GetSequence(string key) {
+        LevelSequence result = null;
+        foreach (LevelSequence seq in GetComponents<LevelSequence>()) {
+            if (seq.key == key) {
+                result = seq;
             }
         }
 
-        foreach (Transform t in marked) {
-            activeObstacles.Remove(t);
-            Destroy(t.gameObject);
+        if (result == null) {
+            Debug.LogError("No LevelSequence with key: " + key);
         }
 
-    }
-
-    private void SpawnObstacle() {
-
-        GameObject go = (GameObject) Instantiate(Resources.Load("Prefabs/SquareObstacle"));
-
-        float fallDistance = player.transform.position.y;
-        go.transform.position = new Vector3(0, fallDistance - cameraHeight, 0);
-        Obstacle obst = go.GetComponent<Obstacle>();
-        if (obst != null) {
-            obst.Spawn();
-        }
-
-        activeObstacles.Add(go.transform);
-
+        return result;
     }
 }
