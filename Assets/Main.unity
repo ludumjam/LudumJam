@@ -122,7 +122,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 428992, guid: baaafa3cdf5428c49ab11ada193e0d5d, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: baaafa3cdf5428c49ab11ada193e0d5d, type: 2}
@@ -168,7 +168,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 458446, guid: 476b3bd1ae30f3442bfb007eead23632, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11491614, guid: 476b3bd1ae30f3442bfb007eead23632, type: 2}
       propertyPath: obstacles.Array.data[2]
@@ -256,7 +256,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22458588, guid: 29ff48a240233c341939265ed2f3084e, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 22458588, guid: 29ff48a240233c341939265ed2f3084e, type: 2}
       propertyPath: m_AnchoredPosition.x
