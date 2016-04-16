@@ -319,7 +319,7 @@ Transform:
   m_GameObject: {fileID: 122926}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_Children:
   - {fileID: 460956}
   - {fileID: 430156}
@@ -394,8 +394,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 111046}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -0.12, z: 0}
+  m_LocalScale: {x: 0.6, y: 0.4, z: 1}
   m_Children:
   - {fileID: 470328}
   - {fileID: 463252}
@@ -622,6 +622,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceModifier: 0.5
+  screenShakeIntensity: 1
+  screenShakeDuration: 0.2
 --- !u!114 &11434076
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -634,6 +636,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceModifier: 0.5
+  screenShakeIntensity: 1
+  screenShakeDuration: 0.2
 --- !u!114 &11439970
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -646,6 +650,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceModifier: 0.5
+  screenShakeIntensity: 1
+  screenShakeDuration: 0.2
 --- !u!114 &11441718
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -696,6 +702,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceModifier: 0.5
+  screenShakeIntensity: 1
+  screenShakeDuration: 0.2
 --- !u!114 &11478028
 MonoBehaviour:
   m_ObjectHideFlags: 1
