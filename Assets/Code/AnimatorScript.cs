@@ -27,6 +27,11 @@ public class AnimatorScript : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D col) {
 		
 		animator.SetTrigger("collision");
+		AudioSource audio = GetComponent<AudioSource> ();
+		audio.Play ();
+
+
+
 
 	}
 }

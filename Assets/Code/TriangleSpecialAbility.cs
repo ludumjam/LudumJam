@@ -61,7 +61,7 @@ public class TriangleSpecialAbility : MonoBehaviour
         Vector3 newScale = originalScale;
         while (newScale.sqrMagnitude > targetScale.sqrMagnitude)
         {
-            scaleTimer += Time.deltaTime;
+			scaleTimer += 50 + Time.deltaTime;
             newScale = Vector3.Lerp(originalScale, targetScale, scaleTimer);
             transform.localScale = newScale;
             yield return null;
@@ -75,7 +75,7 @@ public class TriangleSpecialAbility : MonoBehaviour
         Vector3 newScale = originalScale;
         while (newScale.sqrMagnitude < targetScale.sqrMagnitude)
         {
-            scaleTimer += Time.deltaTime;
+            scaleTimer += 50 + Time.deltaTime;
             newScale = Vector3.Lerp(originalScale, targetScale, scaleTimer);
             transform.localScale = newScale;
             yield return null;
