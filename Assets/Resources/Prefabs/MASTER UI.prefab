@@ -1034,6 +1034,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scorePrefab: {fileID: 165824, guid: fac44f14780e54b7cad0274d1476003c, type: 2}
+  leaderboardBackgroundPanel: {fileID: 140600}
   leaderboardPanel: {fileID: 126482}
 --- !u!114 &11440328
 MonoBehaviour:
@@ -1296,7 +1297,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 140600}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
@@ -1860,8 +1861,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000015258795, y: -0.000015258789}
-  m_SizeDelta: {x: 376, y: 648}
+  m_AnchoredPosition: {x: -0.000015258795, y: -25}
+  m_SizeDelta: {x: 376, y: 598}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22418116
 RectTransform:
@@ -1877,7 +1878,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000030518, y: 124}
+  m_AnchoredPosition: {x: 0.0000073828, y: 374}
   m_SizeDelta: {x: 523, y: 97}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22419198
@@ -2002,7 +2003,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015258789, y: -0.0000076294}
+  m_AnchoredPosition: {x: -0.0000078764, y: -445}
   m_SizeDelta: {x: 320.9, y: 123}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22444088
