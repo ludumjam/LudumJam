@@ -33,7 +33,6 @@ GameObject:
   - 82: {fileID: 8249378}
   - 82: {fileID: 8208644}
   - 114: {fileID: 11412444}
-  - 114: {fileID: 11477268}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -57,11 +56,6 @@ GameObject:
   - 114: {fileID: 11478028}
   - 114: {fileID: 11428174}
   - 82: {fileID: 8218230}
-  - 114: {fileID: 11450362}
-  - 114: {fileID: 11469328}
-  - 114: {fileID: 11400244}
-  - 114: {fileID: 11472446}
-  - 114: {fileID: 11434758}
   - 82: {fileID: 8280008}
   m_Layer: 2
   m_Name: Rectangle
@@ -1234,19 +1228,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11400244
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 111046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33a25f4632a3fa94084b0a35508ff6b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooldownTime: 1
-  duration: 0.4
 --- !u!114 &11402342
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1276,6 +1257,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldownTime: 3
   duration: 0.4
+  ability: {fileID: 8300000, guid: e41ee9367726def4795b81becb34ae50, type: 3}
+  audio2: {fileID: 8208644}
 --- !u!114 &11428174
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1289,6 +1272,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldownTime: 1
   duration: 0.4
+  ability: {fileID: 8300000, guid: 3c11a3d44e7771d4d8efac7cff98ab2a, type: 3}
+  audio2: {fileID: 8280008}
 --- !u!114 &11429028
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1317,19 +1302,6 @@ MonoBehaviour:
   forceModifier: 0.5
   screenShakeIntensity: 1
   screenShakeDuration: 0.2
---- !u!114 &11434758
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 111046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33a25f4632a3fa94084b0a35508ff6b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooldownTime: 1
-  duration: 0.4
 --- !u!114 &11439970
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1373,19 +1345,6 @@ MonoBehaviour:
   - {fileID: 122926}
   - {fileID: 103704}
   - {fileID: 111046}
---- !u!114 &11450362
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 111046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33a25f4632a3fa94084b0a35508ff6b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooldownTime: 1
-  duration: 0.4
 --- !u!114 &11451114
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1413,32 +1372,6 @@ MonoBehaviour:
   forceModifier: 0.5
   screenShakeIntensity: 1
   screenShakeDuration: 0.2
---- !u!114 &11469328
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 111046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33a25f4632a3fa94084b0a35508ff6b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooldownTime: 1
-  duration: 0.4
---- !u!114 &11472446
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 111046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33a25f4632a3fa94084b0a35508ff6b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooldownTime: 1
-  duration: 0.4
 --- !u!114 &11472872
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1453,19 +1386,8 @@ MonoBehaviour:
   cooldownTime: 3
   duration: 4
   scaleMultiplier: 0.5
---- !u!114 &11477268
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 103704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88a547caad2d1e94fba8083ae5aa2971, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooldownTime: 3
-  duration: 0.4
+  ability: {fileID: 8300000, guid: 5c213006c63e7a942b5823aecd2c3333, type: 3}
+  audio2: {fileID: 8285842}
 --- !u!114 &11478028
 MonoBehaviour:
   m_ObjectHideFlags: 1

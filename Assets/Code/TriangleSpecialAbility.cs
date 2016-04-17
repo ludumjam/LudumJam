@@ -6,6 +6,8 @@ public class TriangleSpecialAbility : MonoBehaviour, ISpecialAbility
     public float cooldownTime = 3f;
     public float duration = 0.4f;
     public float scaleMultiplier = 0.5f;
+	public AudioClip ability;
+	public AudioSource audio2; 
     private float timeSinceLastUse = 0f;
     private Vector3 originalScale;
     private Vector3 targetScale;
@@ -77,7 +79,10 @@ public class TriangleSpecialAbility : MonoBehaviour, ISpecialAbility
     {
         if (timeSinceLastUse >= cooldownTime && !isShrunk)
         {
-            timeSinceLastUse = 0f;
+			AudioSource audio = GetComponent<AudioSource>();
+			audio.clip = ability;
+			audio2.PlayOneShot(ability, 1.0F);
+			timeSinceLastUse = 0f;
             // Setup effect
             originalScale = transform.localScale;
             targetScale = originalScale * scaleMultiplier;

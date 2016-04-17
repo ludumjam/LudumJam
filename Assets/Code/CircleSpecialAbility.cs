@@ -5,6 +5,8 @@ public class CircleSpecialAbility : MonoBehaviour, ISpecialAbility {
 
     public float cooldownTime = 3f;
     public float duration = 0.4f;
+	public AudioClip ability;
+	public AudioSource audio2; 
 
     private float timeSinceLastUse = 0f;
     private float yVelocity;
@@ -42,6 +44,9 @@ public class CircleSpecialAbility : MonoBehaviour, ISpecialAbility {
 
     public void TriggerAbility() {
         if (timeSinceLastUse >= cooldownTime) {
+			AudioSource audio = GetComponent<AudioSource>();
+			audio.clip = ability;
+			audio2.PlayOneShot(ability, 1.0F);
             timeSinceLastUse = 0f;
             isActive = true;
             Physics2D.gravity = new Vector2(0, 50f);

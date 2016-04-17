@@ -5,6 +5,8 @@ public class RectangleSpecialAbility : MonoBehaviour, ISpecialAbility {
 
     public float cooldownTime = 3f;
     public float duration = 0.4f;
+	public AudioClip ability;
+	public AudioSource audio2; 
 
     private float timeSinceLastUse = 0f;
     private float yVelocity;
@@ -39,6 +41,7 @@ public class RectangleSpecialAbility : MonoBehaviour, ISpecialAbility {
             }
         }
         if (isActive) {
+			
             RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.right);
             if (hitInfo.rigidbody != null) {
                 Destroy(hitInfo.rigidbody.gameObject);
@@ -50,6 +53,9 @@ public class RectangleSpecialAbility : MonoBehaviour, ISpecialAbility {
     public void TriggerAbility()
     {
         if (timeSinceLastUse >= cooldownTime) {
+			AudioSource audio = GetComponent<AudioSource>();
+			audio.clip = ability;
+			audio2.PlayOneShot(ability, 1.0F);
             timeSinceLastUse = 0f;
             laser.SetActive(true);
             isActive = true;
