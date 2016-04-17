@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TriangleSpecialAbility : MonoBehaviour
+public class TriangleSpecialAbility : MonoBehaviour, ISpecialAbility
 {
     public float cooldownTime = 3f;
     public float duration = 0.4f;
@@ -43,16 +43,6 @@ public class TriangleSpecialAbility : MonoBehaviour
                 StartCoroutine(Increase());
             }
         }
-
-        if (Input.GetKeyDown(KeyCode.Space) && timeSinceLastUse >= cooldownTime && !isShrunk)
-        {
-            timeSinceLastUse = 0f;
-            // Setup effect
-            originalScale = transform.localScale;
-            targetScale = originalScale * scaleMultiplier;
-            StartCoroutine(Shrink());
-            isActive = true;
-        }
     }
 
     IEnumerator Shrink()
@@ -61,7 +51,7 @@ public class TriangleSpecialAbility : MonoBehaviour
         Vector3 newScale = originalScale;
         while (newScale.sqrMagnitude > targetScale.sqrMagnitude)
         {
-			scaleTimer += 10 * Time.deltaTime;
+            scaleTimer += 10 * Time.deltaTime;
             newScale = Vector3.Lerp(originalScale, targetScale, scaleTimer);
             transform.localScale = newScale;
             yield return null;
@@ -81,5 +71,26 @@ public class TriangleSpecialAbility : MonoBehaviour
             yield return null;
         }
         isShrunk = false;
+    }
+
+    public void TriggerAbility()
+    {
+        if (timeSinceLastUse >= cooldownTime && !isShrunk)
+        {
+            timeSinceLastUse = 0f;
+            // Setup effect
+            originalScale = transform.localScale;
+            targetScale = originalScale * scaleMultiplier;
+            StartCoroutine(Shrink());
+            isActive = true;
+        }
+    }
+
+    public float CoolDown
+    {
+        get
+        {
+            return timeSinceLastUse / cooldownTime;
+        }
     }
 }

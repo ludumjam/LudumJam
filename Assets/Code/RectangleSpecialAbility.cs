@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class RectangleSpecialAbility : MonoBehaviour {
+public class RectangleSpecialAbility : MonoBehaviour, ISpecialAbility {
 
     public float cooldownTime = 3f;
     public float duration = 0.4f;
@@ -39,13 +39,6 @@ public class RectangleSpecialAbility : MonoBehaviour {
                 laser.SetActive(false);
             }
         }
-
-        if (Input.GetKeyDown(KeyCode.Space) && timeSinceLastUse >= cooldownTime) {
-            timeSinceLastUse = 0f;
-            laser.SetActive(true);
-            isActive = true;
-        }
-
         if (isActive) {
             RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.right);
             if (hitInfo.rigidbody != null) {
@@ -53,5 +46,22 @@ public class RectangleSpecialAbility : MonoBehaviour {
             }
         }
 
+    }
+
+    public void TriggerAbility()
+    {
+        if (timeSinceLastUse >= cooldownTime) {
+            timeSinceLastUse = 0f;
+            laser.SetActive(true);
+            isActive = true;
+        }
+    }
+
+    public float CoolDown
+    {
+        get
+        {
+            return timeSinceLastUse / cooldownTime;
+        }
     }
 }

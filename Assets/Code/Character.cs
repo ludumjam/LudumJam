@@ -42,6 +42,12 @@ public class Character : MonoBehaviour
         {
             ShapeShift(Shift.Next);
         }
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            // Trigger ability
+            currentChild.GetComponent<ISpecialAbility>().TriggerAbility();
+        }
     }
 
     void FixedUpdate()

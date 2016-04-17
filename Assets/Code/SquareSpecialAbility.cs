@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SquareSpecialAbility : MonoBehaviour
+public class SquareSpecialAbility : MonoBehaviour, ISpecialAbility
 {
     public float cooldownTime = 3f;
     public float duration = 0.4f;
@@ -42,19 +42,30 @@ public class SquareSpecialAbility : MonoBehaviour
                 rigidbody.velocity = newVelocity;
             }
         }
+        if (isActive)
+        {
+            Vector2 newVelocity = rigidbody.velocity;
+            newVelocity.y = yVelocity;
+            rigidbody.velocity = newVelocity;
+        }
+    }
 
-        if (Input.GetKeyDown(KeyCode.Space) && timeSinceLastUse >= cooldownTime)
+    void ISpecialAbility.TriggerAbility()
+    {
+        if (timeSinceLastUse >= cooldownTime)
         {
             timeSinceLastUse = 0f;
             originalYVelocity = rigidbody.velocity.y;
             yVelocity = originalYVelocity - downForce;
             isActive = true;
         }
-        if (isActive)
+    }
+
+    public float CoolDown
+    {
+        get
         {
-            Vector2 newVelocity = rigidbody.velocity;
-            newVelocity.y = yVelocity;
-            rigidbody.velocity = newVelocity;
+            return timeSinceLastUse / cooldownTime;
         }
     }
 }
