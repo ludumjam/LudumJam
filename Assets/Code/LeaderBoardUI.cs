@@ -11,6 +11,7 @@ public class LeaderBoardUI : MonoBehaviour
     public Text scoreText;
     public InputField inputField;
     public GameObject submissionPanel;
+    public GameObject leaderboardTitle;
     private dreamloLeaderBoard leaderBoard;
     private List<dreamloLeaderBoard.Score> scores;
     private bool areScoresLoaded = false;
@@ -24,6 +25,7 @@ public class LeaderBoardUI : MonoBehaviour
         leaderboardBackgroundPanel.GetComponent<Image>().enabled = false;
         areScoresLoaded = false;
         submissionPanel.SetActive(false);
+        leaderboardTitle.SetActive(false);
         inputField.onEndEdit.AddListener(HandleOnEndEdit);
     }
 
@@ -69,6 +71,7 @@ public class LeaderBoardUI : MonoBehaviour
                     scoreObject.GetComponent<Text>().text = scores[i].playerName + " : " + scores[i].score;
                 }
                 leaderboardBackgroundPanel.GetComponent<Image>().enabled = true;
+                leaderboardTitle.SetActive(true);
             }
         }
     }
