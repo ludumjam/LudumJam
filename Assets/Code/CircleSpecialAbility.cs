@@ -7,7 +7,8 @@ public class CircleSpecialAbility : MonoBehaviour, ISpecialAbility {
     public float duration = 0.4f;
 	public AudioClip ability;
 	public AudioSource audio2;
-    public ParticleSystem psOne;
+    public ParticleSystem particleSystem;
+    public int numParticles = 100;
 
     private float timeSinceLastUse = 0f;
     private float yVelocity;
@@ -72,7 +73,7 @@ public class CircleSpecialAbility : MonoBehaviour, ISpecialAbility {
             //        new ParticleSystem.Burst(2.0f, 1000)
             //    });
 
-            transform.FindChild("zenPS").GetComponent<ParticleSystem>().Emit(100);
+            particleSystem.GetComponent<ParticleSystem>().Emit(numParticles);
 
             timeSinceLastUse = 0f;
             isActive = true;

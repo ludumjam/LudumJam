@@ -6,7 +6,9 @@ public class RectangleSpecialAbility : MonoBehaviour, ISpecialAbility {
     public float cooldownTime = 3f;
     public float duration = 0.4f;
 	public AudioClip ability;
-	public AudioSource audio2; 
+	public AudioSource audio2;
+    public ParticleSystem particleSystem;
+    public int numParticles = 100;
 
     private float timeSinceLastUse = 0f;
     private float yVelocity;
@@ -59,6 +61,7 @@ public class RectangleSpecialAbility : MonoBehaviour, ISpecialAbility {
             timeSinceLastUse = 0f;
             laser.SetActive(true);
             isActive = true;
+            particleSystem.GetComponent<ParticleSystem>().Emit(numParticles);
         }
     }
 

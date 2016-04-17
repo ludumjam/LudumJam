@@ -7,7 +7,10 @@ public class SquareSpecialAbility : MonoBehaviour, ISpecialAbility
     public float duration = 0.4f;
     public float downForce = 50f;
 	public AudioClip ability;
-	public AudioSource audio2; 
+	public AudioSource audio2;
+    public ParticleSystem particleSystem;
+    public int numParticles = 100;
+
     private float timeSinceLastUse = 0f;
     private float yVelocity;
     private float originalYVelocity;
@@ -63,6 +66,7 @@ public class SquareSpecialAbility : MonoBehaviour, ISpecialAbility
             originalYVelocity = rigidbody.velocity.y;
             yVelocity = originalYVelocity - downForce;
             isActive = true;
+            particleSystem.GetComponent<ParticleSystem>().Emit(numParticles);
         }
     }
 

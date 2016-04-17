@@ -7,7 +7,10 @@ public class TriangleSpecialAbility : MonoBehaviour, ISpecialAbility
     public float duration = 0.4f;
     public float scaleMultiplier = 0.5f;
 	public AudioClip ability;
-	public AudioSource audio2; 
+	public AudioSource audio2;
+    public ParticleSystem particleSystem;
+    public int numParticles = 100;
+
     private float timeSinceLastUse = 0f;
     private Vector3 originalScale;
     private Vector3 targetScale;
@@ -88,6 +91,7 @@ public class TriangleSpecialAbility : MonoBehaviour, ISpecialAbility
             targetScale = originalScale * scaleMultiplier;
             StartCoroutine(Shrink());
             isActive = true;
+            particleSystem.GetComponent<ParticleSystem>().Emit(numParticles);
         }
     }
 
