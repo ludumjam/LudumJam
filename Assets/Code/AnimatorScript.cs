@@ -3,6 +3,7 @@ using System.Collections;
 
 public class AnimatorScript : MonoBehaviour {
 
+	public AudioClip collision;
 	Animator animator;
 
 	// Use this for initialization
@@ -27,8 +28,9 @@ public class AnimatorScript : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D col) {
 		
 		animator.SetTrigger("collision");
-		AudioSource audio = GetComponent<AudioSource> ();
-		audio.Play ();
+		AudioSource audio = GetComponent<AudioSource>();
+		audio.clip = collision;
+		audio.PlayOneShot(collision, 0.4F);
 
 
 

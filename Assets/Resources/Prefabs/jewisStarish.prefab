@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 445896}
   - 212: {fileID: 21273658}
   - 60: {fileID: 6061590}
+  - 114: {fileID: 11429016}
   m_Layer: 0
   m_Name: jewisStarish
   m_TagString: Untagged
@@ -59,6 +60,18 @@ PolygonCollider2D:
       - {x: 0.36241627, y: -0.36214447}
       - {x: 0.36255646, y: -0.14979935}
       - {x: 0.5128956, y: 0.00008392334}
+--- !u!114 &11429016
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 131452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cde321459ca24245a47b3e4ec7366a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frequency: 1
 --- !u!212 &21273658
 SpriteRenderer:
   m_ObjectHideFlags: 1

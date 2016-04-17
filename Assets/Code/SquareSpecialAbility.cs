@@ -6,6 +6,7 @@ public class SquareSpecialAbility : MonoBehaviour, ISpecialAbility
     public float cooldownTime = 3f;
     public float duration = 0.4f;
     public float downForce = 50f;
+	public AudioClip ability;
     private float timeSinceLastUse = 0f;
     private float yVelocity;
     private float originalYVelocity;
@@ -54,7 +55,10 @@ public class SquareSpecialAbility : MonoBehaviour, ISpecialAbility
     {
         if (timeSinceLastUse >= cooldownTime)
         {
-            timeSinceLastUse = 0f;
+			AudioSource audio = GetComponent<AudioSource>();
+			audio.clip = ability;
+			audio.PlayOneShot(ability, 1.0F);
+			timeSinceLastUse = 0f;
             originalYVelocity = rigidbody.velocity.y;
             yVelocity = originalYVelocity - downForce;
             isActive = true;
