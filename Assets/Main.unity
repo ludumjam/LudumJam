@@ -228,6 +228,10 @@ Prefab:
       propertyPath: ability
       value: 
       objectReference: {fileID: 8300000, guid: 242612d7c2301c14da3d381ca5f8fe14, type: 3}
+    - target: {fileID: 11428174, guid: baaafa3cdf5428c49ab11ada193e0d5d, type: 2}
+      propertyPath: cooldownTime
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: baaafa3cdf5428c49ab11ada193e0d5d, type: 2}
   m_IsPrefabParent: 0
