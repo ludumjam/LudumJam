@@ -4,6 +4,7 @@ using System.Collections;
 public class AnimatorScript : MonoBehaviour {
 
 	public AudioClip collision;
+	public AudioSource audio1; 
 	Animator animator;
 
 	// Use this for initialization
@@ -29,7 +30,7 @@ public class AnimatorScript : MonoBehaviour {
 		
 		animator.SetTrigger("collision");
 		AudioSource audio = GetComponent<AudioSource>();
-		audio.clip = collision;
+		audio1.clip = collision;
 		audio.PlayOneShot(collision, 0.4F);
 
 

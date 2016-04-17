@@ -7,6 +7,7 @@ public class SquareSpecialAbility : MonoBehaviour, ISpecialAbility
     public float duration = 0.4f;
     public float downForce = 50f;
 	public AudioClip ability;
+	public AudioSource audio2; 
     private float timeSinceLastUse = 0f;
     private float yVelocity;
     private float originalYVelocity;
@@ -57,7 +58,7 @@ public class SquareSpecialAbility : MonoBehaviour, ISpecialAbility
         {
 			AudioSource audio = GetComponent<AudioSource>();
 			audio.clip = ability;
-			audio.PlayOneShot(ability, 1.0F);
+			audio2.PlayOneShot(ability, 1.0F);
 			timeSinceLastUse = 0f;
             originalYVelocity = rigidbody.velocity.y;
             yVelocity = originalYVelocity - downForce;
