@@ -6,9 +6,7 @@ public class CameraFollow : MonoBehaviour {
     public float deathOffset = 6f;
     public float maxDistanceToPlayer = 1f;
     public float speed = 0.2f;
-    private float currentYVelocity = 0f;
     private float targetY;
-    private Coroutine cameraShakeRoutine;
     private bool isShaking = false;
 
     public delegate void OnDeathEvent();
@@ -17,7 +15,6 @@ public class CameraFollow : MonoBehaviour {
 
     void Start()
     {
-        cameraShakeRoutine = null;
         isShaking = false;
         hasOnPlayerWentOutsideScreenBeenCalled = false;
     }

@@ -64,14 +64,15 @@ public class CircleSpecialAbility : MonoBehaviour, ISpecialAbility {
                 new ParticleSystem.Burst(4.0f, 100)
                 });*/
 
-            ParticleSystem psOne = GetComponent<ParticleSystem>();
-            var em = psOne.emission;
-            em.enabled = true;
-            em.type = ParticleSystemEmissionType.Time;
-            em.SetBursts(new ParticleSystem.Burst[] {
-                    new ParticleSystem.Burst(2.0f, 1000)
-                });
+            //ParticleSystem psOne = GetComponent<ParticleSystem>();
+            //var em = psOne.emission;
+            //em.enabled = true;
+            //em.type = ParticleSystemEmissionType.Time;
+            //em.SetBursts(new ParticleSystem.Burst[] {
+            //        new ParticleSystem.Burst(2.0f, 1000)
+            //    });
 
+            transform.FindChild("zenPS").GetComponent<ParticleSystem>().Emit(100);
 
             timeSinceLastUse = 0f;
             isActive = true;
