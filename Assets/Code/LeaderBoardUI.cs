@@ -38,6 +38,12 @@ public class LeaderBoardUI : MonoBehaviour
         leaderBoard.AddScore(text, (int)Character.greatestDistanceAchieved);
         submissionPanel.SetActive(false);
     }
+
+    void OnDestroy()
+    {
+        CameraFollow.OnPlayerWentOutsideScreen -= HandleOnDeathEvent;
+        inputField.onEndEdit.RemoveListener(HandleOnEndEdit);
+    }
 	
     // Update is called once per frame
     void Update()
