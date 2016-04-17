@@ -33,6 +33,7 @@ GameObject:
   - 82: {fileID: 8249378}
   - 82: {fileID: 8208644}
   - 114: {fileID: 11412444}
+  - 114: {fileID: 11477268}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -1355,7 +1356,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collision: {fileID: 8300000, guid: 8ff72c603e9130e43b90e4944ef25ae8, type: 3}
-  audio1: {fileID: 0}
+  audio1: {fileID: 8211322}
 --- !u!114 &11441958
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1452,6 +1453,19 @@ MonoBehaviour:
   cooldownTime: 3
   duration: 4
   scaleMultiplier: 0.5
+--- !u!114 &11477268
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 103704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88a547caad2d1e94fba8083ae5aa2971, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownTime: 3
+  duration: 0.4
 --- !u!114 &11478028
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1464,7 +1478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collision: {fileID: 8300000, guid: 8ff72c603e9130e43b90e4944ef25ae8, type: 3}
-  audio1: {fileID: 0}
+  audio1: {fileID: 8211322}
 --- !u!114 &11480210
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1477,7 +1491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collision: {fileID: 8300000, guid: 8ff72c603e9130e43b90e4944ef25ae8, type: 3}
-  audio1: {fileID: 0}
+  audio1: {fileID: 8211322}
 --- !u!198 &19818246
 ParticleSystem:
   m_ObjectHideFlags: 1
