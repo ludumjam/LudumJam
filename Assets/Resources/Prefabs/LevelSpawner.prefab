@@ -160,7 +160,7 @@ MonoBehaviour:
   key: 0
   obstacles:
   - {fileID: 167000, guid: 4db4060078b637e439e50d02c6e7387c, type: 2}
-  - {fileID: 102472, guid: fd83a0c1b34def4418630872cb8c42c7, type: 2}
+  - {fileID: 155400, guid: fd83a0c1b34def4418630872cb8c42c7, type: 2}
   - {fileID: 172934, guid: 4f599e6a0e7ce174fa975652ee137c07, type: 2}
   - {fileID: 103614, guid: 027b76bbe15ad4147a278b39835c9e66, type: 2}
 --- !u!1001 &100100000
