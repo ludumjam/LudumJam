@@ -38,16 +38,17 @@ public class MenuController : MonoBehaviour
         float previousYPosition = 0f;
         for (int i = 0; i < scores.Count; i++)
         {
-            GameObject scoreObject = (GameObject)Instantiate(scoreTextPrefab);
-            scoreObject.transform.SetParent(leaderboardPanel.transform);
-            scoreObject.transform.localPosition = Vector3.zero;
-            RectTransform scoreRectTransform = scoreObject.GetComponent<RectTransform>();
+            GameObject entry = (GameObject)Instantiate(scoreTextPrefab);
+            entry.transform.SetParent(leaderboardPanel.transform);
+            entry.transform.localPosition = Vector3.zero;
+            RectTransform scoreRectTransform = entry.GetComponent<RectTransform>();
             scoreRectTransform.localScale = Vector3.one;
             scoreRectTransform.localPosition = new Vector3(0, previousYPosition - offset, 0);
             scoreRectTransform.offsetMin = new Vector2(10, scoreRectTransform.offsetMin.y);
             scoreRectTransform.offsetMax = new Vector2(30, scoreRectTransform.offsetMax.y);
             previousYPosition -= offset;
-            scoreObject.GetComponent<Text>().text = scores[i].playerName + " : " + scores[i].score;
+            entry.transform.FindChild("Name").GetComponent<Text>().text = scores[i].playerName;
+            entry.transform.FindChild("Score").GetComponent<Text>().text = scores[i].score.ToString();
         }
         RectTransform leaderboardRectTransform = leaderboardPanel.GetComponent<RectTransform>();
         leaderboardRectTransform.sizeDelta = new Vector2(leaderboardRectTransform.sizeDelta.x, offset * scores.Count);

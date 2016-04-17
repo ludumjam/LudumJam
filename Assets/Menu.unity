@@ -1102,7 +1102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0626d5995d2fc487998ad10fa1e55d65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreTextPrefab: {fileID: 162848, guid: 506fe0c648c764b2c9a1bba5a4f2a98c, type: 2}
+  scoreTextPrefab: {fileID: 184804, guid: bdc4c824a04c64b328a3e57c7d20bba9, type: 2}
   leaderboardPanel: {fileID: 1827009211}
   offset: 90
 --- !u!114 &687240639
@@ -1157,7 +1157,6 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
