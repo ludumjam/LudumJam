@@ -63,7 +63,7 @@ public class LeaderBoardUI : MonoBehaviour
                     scoreObject.transform.SetParent(leaderboardPanel.transform);
                     scoreObject.transform.localPosition = Vector3.zero;
                     RectTransform scoreRectTransform = scoreObject.GetComponent<RectTransform>();
-                    //scoreRectTransform.localScale = Vector3.one;
+                    scoreRectTransform.localScale = Vector3.one;
                     scoreRectTransform.localPosition = new Vector3(0, previousYPosition - offset, 0);
                     previousYPosition -= offset;
                     //scoreRectTransform.offsetMin = new Vector2(0, scoreRectTransform.offsetMin.y);
