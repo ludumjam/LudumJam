@@ -128,6 +128,54 @@ Prefab:
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 492826, guid: baaafa3cdf5428c49ab11ada193e0d5d, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 491258, guid: baaafa3cdf5428c49ab11ada193e0d5d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 3.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 491258, guid: baaafa3cdf5428c49ab11ada193e0d5d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 111046, guid: baaafa3cdf5428c49ab11ada193e0d5d, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 124008, guid: baaafa3cdf5428c49ab11ada193e0d5d, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 166050, guid: baaafa3cdf5428c49ab11ada193e0d5d, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 188456, guid: baaafa3cdf5428c49ab11ada193e0d5d, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 470328, guid: baaafa3cdf5428c49ab11ada193e0d5d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 21230228, guid: baaafa3cdf5428c49ab11ada193e0d5d, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6117146, guid: baaafa3cdf5428c49ab11ada193e0d5d, type: 2}
+      propertyPath: m_Offset.x
+      value: 1.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 21225078, guid: baaafa3cdf5428c49ab11ada193e0d5d, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 470328, guid: baaafa3cdf5428c49ab11ada193e0d5d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: baaafa3cdf5428c49ab11ada193e0d5d, type: 2}
   m_IsPrefabParent: 0
@@ -146,7 +194,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &740702154
 SpriteRenderer:
   m_ObjectHideFlags: 0
