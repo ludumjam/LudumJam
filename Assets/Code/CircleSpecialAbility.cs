@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class RectangleSpecialAbility : MonoBehaviour, ISpecialAbility {
+public class CircleSpecialAbility : MonoBehaviour, ISpecialAbility {
 
     public float cooldownTime = 3f;
     public float duration = 0.4f;
@@ -16,13 +16,11 @@ public class RectangleSpecialAbility : MonoBehaviour, ISpecialAbility {
     void Start() {
         rigidbody = GetComponent<Rigidbody2D>();
         CameraFollow.OnPlayerWentOutsideScreen += HandleOnDeathEvent;
-        laser = transform.Find("Laser").gameObject;
-        laser.SetActive(false);
     }
 
     void HandleOnDeathEvent() {
         enabled = false;
-        laser.SetActive(false);
+        Time.timeScale = 1.0f;
     }
 
     void OnDestroy() {
@@ -35,32 +33,27 @@ public class RectangleSpecialAbility : MonoBehaviour, ISpecialAbility {
         if (timeSinceLastUse >= duration) {
             if (isActive) {
                 isActive = false;
-                laser.SetActive(false);
+                Physics2D.gravity = new Vector2(0, -10f);
+                GetComponent<Rigidbody2D>().gravityScale = 1f;
+                GetComponent<Rigidbody2D>().drag = 0f;
             }
         }
-        if (isActive) {
-            RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.right);
-            if (hitInfo.rigidbody != null) {
-                Destroy(hitInfo.rigidbody.gameObject);
-            }
-        }
-
     }
 
-    public void TriggerAbility()
-    {
+    public void TriggerAbility() {
         if (timeSinceLastUse >= cooldownTime) {
             timeSinceLastUse = 0f;
-            laser.SetActive(true);
             isActive = true;
+            Physics2D.gravity = new Vector2(0, 50f);
+            GetComponent<Rigidbody2D>().gravityScale = 0f;
+            GetComponent<Rigidbody2D>().drag = 1000f;
         }
     }
 
-    public float CoolDown
-    {
-        get
-        {
+    public float CoolDown {
+        get {
             return timeSinceLastUse / cooldownTime;
         }
     }
+
 }
