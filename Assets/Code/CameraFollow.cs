@@ -13,11 +13,13 @@ public class CameraFollow : MonoBehaviour {
 
     public delegate void OnDeathEvent();
     public static OnDeathEvent OnPlayerWentOutsideScreen;
+    private bool hasOnPlayerWentOutsideScreenBeenCalled = false;
 
     void Start()
     {
         cameraShakeRoutine = null;
         isShaking = false;
+        hasOnPlayerWentOutsideScreenBeenCalled = false;
     }
 
     float CharY() {
@@ -40,9 +42,10 @@ public class CameraFollow : MonoBehaviour {
 
         if (CharY() > transform.position.y + deathOffset)
         {
-            if (OnPlayerWentOutsideScreen != null)
+            if (!hasOnPlayerWentOutsideScreenBeenCalled && OnPlayerWentOutsideScreen != null)
             {
                 OnPlayerWentOutsideScreen();
+                hasOnPlayerWentOutsideScreenBeenCalled = true;
             }
         }
     }
