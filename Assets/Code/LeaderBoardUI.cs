@@ -49,7 +49,7 @@ public class LeaderBoardUI : MonoBehaviour
             {
                 areScoresLoaded = true;
                 float previousYPosition = 0f;
-                foreach (dreamloLeaderBoard.Score score in scores)
+                for (int i = 0; i < 10; i++)
                 {
                     GameObject scoreObject = (GameObject)Instantiate(scorePrefab);
                     scoreObject.transform.SetParent(leaderboardPanel.transform);
@@ -60,7 +60,7 @@ public class LeaderBoardUI : MonoBehaviour
                     previousYPosition -= offset;
                     scoreRectTransform.offsetMin = new Vector2(0, scoreRectTransform.offsetMin.y);
                     scoreRectTransform.offsetMax = new Vector2(0, scoreRectTransform.offsetMax.y);
-                    scoreObject.GetComponent<Text>().text = score.playerName + " : " + score.score;
+                    scoreObject.GetComponent<Text>().text = scores[i].playerName + " : " + scores[i].score;
                 }
                 leaderboardBackgroundPanel.GetComponent<Image>().enabled = true;
             }
