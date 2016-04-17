@@ -17,15 +17,14 @@ public class LeaderBoardUI : MonoBehaviour
     void Start()
     {
         leaderBoard = dreamloLeaderBoard.GetSceneDreamloLeaderboard();
-        List<dreamloLeaderBoard.Score> scores = new List<dreamloLeaderBoard.Score>();
         CameraFollow.OnPlayerWentOutsideScreen += HandleOnDeathEvent;
         leaderboardBackgroundPanel.GetComponent<Image>().enabled = false;
+        areScoresLoaded = false;
     }
 
-    void HandleOnDeathEvent ()
+    void HandleOnDeathEvent()
     {
-        leaderBoard.AddScore("Player 1", (int) Character.greatestDistanceAchieved);
-        leaderBoard.LoadScores();
+        leaderBoard.AddScore("Player 2", (int)Character.greatestDistanceAchieved);
     }
 	
     // Update is called once per frame
@@ -38,9 +37,9 @@ public class LeaderBoardUI : MonoBehaviour
             {
                 areScoresLoaded = true;
                 float previousYPosition = 0f;
-                foreach (dreamloLeaderBoard.Score score in leaderBoard.ToListHighToLow())
+                foreach (dreamloLeaderBoard.Score score in scores)
                 {
-                    GameObject scoreObject = (GameObject) Instantiate(scorePrefab);
+                    GameObject scoreObject = (GameObject)Instantiate(scorePrefab);
                     scoreObject.transform.SetParent(leaderboardPanel.transform);
                     scoreObject.transform.localPosition = Vector3.zero;
                     RectTransform scoreRectTransform = scoreObject.GetComponent<RectTransform>();
