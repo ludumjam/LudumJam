@@ -11,7 +11,7 @@ public class UIController : MonoBehaviour
     public Text distanceText;
     public Image[] shapes;
     public Character character;
-    private Image[] highlights;
+	public Image[] highlights;
 
     // Use this for initialization
     void Start()
@@ -20,11 +20,7 @@ public class UIController : MonoBehaviour
         CameraFollow.OnPlayerWentOutsideScreen += HandleOnDeathEvent;
         retryButton.onClick.AddListener(HandleRetryButtonOnClick);
         Character.OnPlayerShapeShift += HandleShapeShiftEvent;
-        highlights = new Image[shapes.Length];
-        for (int i = 0; i < shapes.Length; i++)
-        {
-            highlights[i] = shapes[i].transform.FindChild("Highlight").GetComponent<Image>();
-        }
+    
     }
 
     void HandleShapeShiftEvent(int index, int previousIndex)
