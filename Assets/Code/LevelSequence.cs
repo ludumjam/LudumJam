@@ -38,6 +38,8 @@ public class LevelSequence : MonoBehaviour {
             if (obstacleTriggers[i] >= freq) {
                 obstacleTriggers[i] = Random.Range(-freq/2, freq/2);
                 SpawnObstacle(obstacleGO);
+                if (freq > 1)
+                    break;
             }
         }
     }
