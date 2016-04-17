@@ -10,6 +10,8 @@ public class UIController : MonoBehaviour
     public Button retryButton;
     public Text distanceText;
     public Image[] shapes;
+    public Character character;
+    private Image[] highlights;
 
     // Use this for initialization
     void Start()
@@ -18,23 +20,25 @@ public class UIController : MonoBehaviour
         CameraFollow.OnPlayerWentOutsideScreen += HandleOnDeathEvent;
         retryButton.onClick.AddListener(HandleRetryButtonOnClick);
         Character.OnPlayerShapeShift += HandleShapeShiftEvent;
-        
+        highlights = new Image[shapes.Length];
         for (int i = 0; i < shapes.Length; i++)
         {
-            Color tempColor = shapes[i].color;
-            tempColor.a = (i == 0) ? 1f : 0f;
-            shapes[i].color = tempColor;
+            highlights[i] = shapes[i].transform.FindChild("Highlight").GetComponent<Image>();
         }
     }
 
-    void HandleShapeShiftEvent (int index, int previousIndex)
+    void HandleShapeShiftEvent(int index, int previousIndex)
     {
-        Color tempColor = shapes[index].color;
-        tempColor.a = 1f;
-        shapes[index].color = tempColor;
-        tempColor = shapes[previousIndex].color;
-        tempColor.a = 0f;
-        shapes[previousIndex].color = tempColor;
+        highlights[index].enabled = true;
+        highlights[previousIndex].enabled = false;
+    }
+
+    void Update()
+    {
+        for (int i = 0; i < shapes.Length; i++)
+        {
+            shapes[i].fillAmount = Mathf.Clamp(character.children[i].GetComponent<ISpecialAbility>().CoolDown, 0f, 1f);
+        }
     }
 
     void FixedUpdate()
