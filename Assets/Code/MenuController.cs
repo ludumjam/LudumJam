@@ -49,5 +49,7 @@ public class MenuController : MonoBehaviour
             previousYPosition -= offset;
             scoreObject.GetComponent<Text>().text = scores[i].playerName + " : " + scores[i].score;
         }
+        RectTransform leaderboardRectTransform = leaderboardPanel.GetComponent<RectTransform>();
+        leaderboardRectTransform.sizeDelta = new Vector2(leaderboardRectTransform.sizeDelta.x, offset * scores.Count);
     }
 }

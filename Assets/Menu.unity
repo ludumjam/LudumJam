@@ -811,7 +811,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreTextPrefab: {fileID: 162848, guid: 506fe0c648c764b2c9a1bba5a4f2a98c, type: 2}
   leaderboardPanel: {fileID: 1827009211}
-  offset: 70
+  offset: 90
 --- !u!114 &687240639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2039,6 +2039,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 224: {fileID: 1827009212}
+  - 114: {fileID: 1827009213}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -2063,6 +2064,26 @@ RectTransform:
   m_AnchoredPosition: {x: -0.0000094821, y: 0}
   m_SizeDelta: {x: 0, y: 4380}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &1827009213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1827009211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1297475563, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 10
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
 --- !u!1001 &2040493629
 Prefab:
   m_ObjectHideFlags: 0
