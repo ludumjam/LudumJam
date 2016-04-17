@@ -238,7 +238,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldownTime: 1
   duration: 0.4
-  downForce: 50
 --- !u!1001 &1587770937
 Prefab:
   m_ObjectHideFlags: 0
@@ -281,6 +280,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 36a2bc5ac64c23b45bf5338c7e739a23, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1709619671 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 103704, guid: baaafa3cdf5428c49ab11ada193e0d5d, type: 2}
+  m_PrefabInternal: {fileID: 512367030}
+--- !u!114 &1709619672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1709619671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88a547caad2d1e94fba8083ae5aa2971, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownTime: 3
+  duration: 0.4
 --- !u!1001 &1960172795
 Prefab:
   m_ObjectHideFlags: 0
