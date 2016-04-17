@@ -61,14 +61,17 @@ public class LevelSequence : MonoBehaviour {
 
         List<Transform> marked = new List<Transform>();
         foreach (Transform t in activeObstacles) {
-            if (t.position.y > camY + camHeight || t.position.y < camY - camHeight*2) {
+            if (t == null) {
+                marked.Add(t);
+            } else if (t.position.y > camY + camHeight || t.position.y < camY - camHeight*2) {
                 marked.Add(t);
             }
         }
 
         foreach (Transform t in marked) {
             activeObstacles.Remove(t);
-            Destroy(t.gameObject);
+            if (t != null)
+                Destroy(t.gameObject);
         }
     }
 }

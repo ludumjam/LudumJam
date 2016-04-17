@@ -49,7 +49,7 @@ public class RectangleSpecialAbility : MonoBehaviour {
         if (isActive) {
             RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.right);
             if (hitInfo.rigidbody != null) {
-                hitInfo.rigidbody.AddForce(transform.right*200f);
+                Destroy(hitInfo.rigidbody.gameObject);
             }
         }
 
