@@ -6,7 +6,8 @@ public class CircleSpecialAbility : MonoBehaviour, ISpecialAbility {
     public float cooldownTime = 3f;
     public float duration = 0.4f;
 	public AudioClip ability;
-	public AudioSource audio2; 
+	public AudioSource audio2;
+    public ParticleSystem psOne;
 
     private float timeSinceLastUse = 0f;
     private float yVelocity;
@@ -18,6 +19,7 @@ public class CircleSpecialAbility : MonoBehaviour, ISpecialAbility {
     void Start() {
         rigidbody = GetComponent<Rigidbody2D>();
         CameraFollow.OnPlayerWentOutsideScreen += HandleOnDeathEvent;
+
     }
 
     void HandleOnDeathEvent() {
@@ -31,6 +33,7 @@ public class CircleSpecialAbility : MonoBehaviour, ISpecialAbility {
 
     void Update() {
         timeSinceLastUse += Time.deltaTime;
+       
 
         if (timeSinceLastUse >= duration) {
             if (isActive) {
@@ -44,9 +47,32 @@ public class CircleSpecialAbility : MonoBehaviour, ISpecialAbility {
 
     public void TriggerAbility() {
         if (timeSinceLastUse >= cooldownTime) {
-			AudioSource audio = GetComponent<AudioSource>();
-			audio.clip = ability;
-			audio2.PlayOneShot(ability, 1.0F);
+            AudioSource audio = GetComponent<AudioSource>();
+            audio.clip = ability;
+            audio2.PlayOneShot(ability, 1.0F);
+
+            /*
+            ParticleSystem psOne = GetComponent<ParticleSystem>();
+            var em = psOne.emission;
+            em.enabled = true;
+
+            em.type = ParticleSystemEmissionType.Time;
+
+            em.SetBursts(
+                new ParticleSystem.Burst[]{
+                new ParticleSystem.Burst(2.0f, 100),
+                new ParticleSystem.Burst(4.0f, 100)
+                });*/
+
+            ParticleSystem psOne = GetComponent<ParticleSystem>();
+            var em = psOne.emission;
+            em.enabled = true;
+            em.type = ParticleSystemEmissionType.Time;
+            em.SetBursts(new ParticleSystem.Burst[] {
+                    new ParticleSystem.Burst(2.0f, 1000)
+                });
+
+
             timeSinceLastUse = 0f;
             isActive = true;
             Physics2D.gravity = new Vector2(0, 50f);

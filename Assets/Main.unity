@@ -232,6 +232,11 @@ Prefab:
       propertyPath: cooldownTime
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11412444, guid: baaafa3cdf5428c49ab11ada193e0d5d, type: 2}
+      propertyPath: psOne
+      value: 
+      objectReference: {fileID: 19826042, guid: d5e8aa0d0c36f3347a78cbcaa0e3c36b,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: baaafa3cdf5428c49ab11ada193e0d5d, type: 2}
   m_IsPrefabParent: 0
