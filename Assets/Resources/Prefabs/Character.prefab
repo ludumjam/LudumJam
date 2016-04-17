@@ -57,6 +57,7 @@ GameObject:
   - 114: {fileID: 11450362}
   - 114: {fileID: 11469328}
   - 114: {fileID: 11400244}
+  - 114: {fileID: 11472446}
   m_Layer: 2
   m_Name: Rectangle
   m_TagString: Untagged
@@ -1081,6 +1082,20 @@ MonoBehaviour:
   screenShakeIntensity: 1
   screenShakeDuration: 0.2
 --- !u!114 &11469328
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 111046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33a25f4632a3fa94084b0a35508ff6b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownTime: 1
+  duration: 0.4
+  downForce: 50
+--- !u!114 &11472446
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
