@@ -16,7 +16,7 @@ public class Character : MonoBehaviour
     void Start()
     {
         currentChild = children[0];
-        currentChild.SetActive(true);
+        ToggleCharacter(currentChild, true);
         CameraFollow.OnPlayerWentOutsideScreen += HandleOnDeathEvent;
         greatestDistanceAchieved = 0f;
     }
@@ -54,16 +54,56 @@ public class Character : MonoBehaviour
         GameObject previousChild = currentChild;
         Vector3 newPosition = previousChild.transform.position;
         Vector2 newVelocity = previousChild.GetComponent<Rigidbody2D>().velocity;
-        previousChild.SetActive(false);
+        ToggleCharacter(previousChild, false);
         int previousIndex = childIndex;
         currentChild = (direction == Shift.Previous) ? GetPreviousChild() : GetNextChild();
         currentChild.transform.position = newPosition;
-        currentChild.SetActive(true);
+        ToggleCharacter(currentChild, true);
         currentChild.GetComponent<Rigidbody2D>().velocity = newVelocity;
 
         if (OnPlayerShapeShift != null)
         {
             OnPlayerShapeShift(childIndex, previousIndex);
+        }
+    }
+
+    private void ToggleCollider(GameObject target, bool newState)
+    {
+        BoxCollider2D boxCollider = target.GetComponent<BoxCollider2D>();
+        CircleCollider2D circleCollider = target.GetComponent<CircleCollider2D>();
+        PolygonCollider2D polygonCollider = target.GetComponent<PolygonCollider2D>();
+
+        if (boxCollider != null)
+        {
+            boxCollider.enabled = newState;
+        }
+        if (circleCollider != null)
+        {
+            circleCollider.enabled = newState;
+        }
+        if (polygonCollider != null)
+        {
+            polygonCollider.enabled = newState;
+        }
+    }
+
+    private void ToggleCharacter(GameObject target, bool newState)
+    {
+        target.GetComponent<SpriteRenderer>().enabled = newState;
+        ToggleCollider(target, newState);
+        target.transform.FindChild("shapeBG").GetComponent<SpriteRenderer>().enabled = newState;
+        Transform laser = target.transform.FindChild("Laser");
+        if (laser != null)
+        {
+            laser.GetComponent<SpriteRenderer>().enabled = newState;
+        }
+        if (newState)
+        {
+            target.transform.FindChild("Trail").GetComponent<ParticleSystem>().Play();
+        }
+        else
+        {
+            target.transform.FindChild("Trail").GetComponent<ParticleSystem>().Stop();
         }
     }
 
