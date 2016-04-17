@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 428992}
   - 114: {fileID: 11441958}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33,7 +33,7 @@ GameObject:
   - 82: {fileID: 8249378}
   - 82: {fileID: 8208644}
   - 114: {fileID: 11412444}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,7 +81,7 @@ GameObject:
   - 114: {fileID: 11472872}
   - 82: {fileID: 8211322}
   - 82: {fileID: 8285842}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 470328}
   - 212: {fileID: 21225078}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: shapeBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   - 114: {fileID: 11451114}
   - 82: {fileID: 8294430}
   - 82: {fileID: 8277246}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 408642}
   - 212: {fileID: 21255334}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: shapeBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +154,7 @@ GameObject:
   - 4: {fileID: 486366}
   - 198: {fileID: 19833690}
   - 199: {fileID: 19921536}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 492826}
   - 212: {fileID: 21213944}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,7 +187,7 @@ GameObject:
   - 4: {fileID: 430156}
   - 198: {fileID: 19846406}
   - 199: {fileID: 19918928}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,7 +203,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 460956}
   - 212: {fileID: 21270138}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: shapeBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -220,7 +220,7 @@ GameObject:
   - 4: {fileID: 412488}
   - 198: {fileID: 19832446}
   - 199: {fileID: 19943110}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -237,7 +237,7 @@ GameObject:
   - 4: {fileID: 463252}
   - 198: {fileID: 19818246}
   - 199: {fileID: 19964564}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,7 +253,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 403160}
   - 212: {fileID: 21276670}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: shapeBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -436,7 +436,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 166050}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.6, y: 0, z: 0}
+  m_LocalPosition: {x: 18.88, y: 0, z: 0}
   m_LocalScale: {x: 30, y: 0.8, z: 1}
   m_Children: []
   m_Father: {fileID: 491258}
@@ -1259,6 +1259,7 @@ MonoBehaviour:
   duration: 0.4
   ability: {fileID: 8300000, guid: e41ee9367726def4795b81becb34ae50, type: 3}
   audio2: {fileID: 8208644}
+  psOne: {fileID: 19826042, guid: d5e8aa0d0c36f3347a78cbcaa0e3c36b, type: 2}
 --- !u!114 &11428174
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1270,7 +1271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33a25f4632a3fa94084b0a35508ff6b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldownTime: 1
+  cooldownTime: 3
   duration: 0.4
   ability: {fileID: 8300000, guid: 3c11a3d44e7771d4d8efac7cff98ab2a, type: 3}
   audio2: {fileID: 8280008}
@@ -1386,7 +1387,7 @@ MonoBehaviour:
   cooldownTime: 3
   duration: 4
   scaleMultiplier: 0.5
-  ability: {fileID: 8300000, guid: 5c213006c63e7a942b5823aecd2c3333, type: 3}
+  ability: {fileID: 8300000, guid: 242612d7c2301c14da3d381ca5f8fe14, type: 3}
   audio2: {fileID: 8285842}
 --- !u!114 &11478028
 MonoBehaviour:
@@ -7540,7 +7541,7 @@ SpriteRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 166050}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_Materials:
