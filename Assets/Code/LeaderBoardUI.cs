@@ -8,6 +8,9 @@ public class LeaderBoardUI : MonoBehaviour
     public GameObject scorePrefab;
     public GameObject leaderboardBackgroundPanel;
     public GameObject leaderboardPanel;
+    public Text scoreText;
+    public InputField inputField;
+    public GameObject submissionPanel;
     private dreamloLeaderBoard leaderBoard;
     private List<dreamloLeaderBoard.Score> scores;
     private bool areScoresLoaded = false;
@@ -20,11 +23,20 @@ public class LeaderBoardUI : MonoBehaviour
         CameraFollow.OnPlayerWentOutsideScreen += HandleOnDeathEvent;
         leaderboardBackgroundPanel.GetComponent<Image>().enabled = false;
         areScoresLoaded = false;
+        submissionPanel.SetActive(false);
+        inputField.onEndEdit.AddListener(HandleOnEndEdit);
     }
 
     void HandleOnDeathEvent()
     {
-        leaderBoard.AddScore("Player 2", (int)Character.greatestDistanceAchieved);
+        scoreText.text = Character.greatestDistanceAchieved.ToString();
+        submissionPanel.SetActive(true);
+    }
+
+    void HandleOnEndEdit(string text)
+    {
+        leaderBoard.AddScore(text, (int)Character.greatestDistanceAchieved);
+        submissionPanel.SetActive(false);
     }
 	
     // Update is called once per frame
