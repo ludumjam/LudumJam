@@ -44,8 +44,9 @@ public class RectangleSpecialAbility : MonoBehaviour, ISpecialAbility {
             }
         }
         if (isActive) {
-			
-            RaycastHit2D hitInfo = Physics2D.BoxCast(transform.position, laserSize, 0f, transform.right);
+            Vector3 laserOrigin = transform.position;
+            laserOrigin += transform.right * 1.536f;
+            RaycastHit2D hitInfo = Physics2D.BoxCast(laserOrigin, laserSize, 0f, transform.right);
             if (hitInfo.rigidbody != null) {
                 Destroy(hitInfo.rigidbody.gameObject);
             }
