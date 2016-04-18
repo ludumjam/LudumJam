@@ -63,4 +63,9 @@ public class UIController : MonoBehaviour
         CameraFollow.OnPlayerWentOutsideScreen -= HandleOnDeathEvent;
         Character.OnPlayerShapeShift -= HandleShapeShiftEvent;
     }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }
