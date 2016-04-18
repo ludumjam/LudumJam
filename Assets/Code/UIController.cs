@@ -12,6 +12,7 @@ public class UIController : MonoBehaviour
     public Image[] shapes;
     public Character character;
     public Image[] highlights;
+    public GameObject retryInstructions;
     private bool isGameOver = false;
 
     // Use this for initialization
@@ -22,6 +23,7 @@ public class UIController : MonoBehaviour
         retryButton.onClick.AddListener(HandleRetryButtonOnClick);
         Character.OnPlayerShapeShift += HandleShapeShiftEvent;
         isGameOver = false;
+        retryInstructions.SetActive(false);
     }
 
     void HandleShapeShiftEvent(int index, int previousIndex)
@@ -50,6 +52,7 @@ public class UIController : MonoBehaviour
     void HandleOnDeathEvent()
     {
         gameOverPanel.SetActive(true);
+        retryInstructions.SetActive(true);
         isGameOver = true;
     }
 
