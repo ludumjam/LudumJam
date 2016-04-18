@@ -74,6 +74,7 @@ GameObject:
   - 114: {fileID: 11428174}
   - 82: {fileID: 8218230}
   - 82: {fileID: 8280008}
+  - 114: {fileID: 11426746}
   m_Layer: 2
   m_Name: Rectangle
   m_TagString: Untagged
@@ -1383,6 +1384,19 @@ MonoBehaviour:
   audio2: {fileID: 8208644}
   particleSystem: {fileID: 19809966}
   numParticles: 100
+--- !u!114 &11426746
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 111046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43ae630f831e2247aa44711c12baaf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: {x: 1.5, y: 0}
+  rb: {fileID: 5077180}
 --- !u!114 &11428174
 MonoBehaviour:
   m_ObjectHideFlags: 1
