@@ -26,7 +26,13 @@ public class LeaderBoardUI : MonoBehaviour
         areScoresLoaded = false;
         submissionPanel.SetActive(false);
         leaderboardTitle.SetActive(false);
-        inputField.onEndEdit.AddListener(HandleOnEndEdit);
+        inputField.onEndEdit.AddListener(val =>
+            {
+                if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
+                {
+                    HandleOnEndEdit(val);
+                }
+            });
     }
 
     void HandleOnDeathEvent()
