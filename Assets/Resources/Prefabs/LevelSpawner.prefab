@@ -16,6 +16,7 @@ GameObject:
   - 114: {fileID: 11422092}
   - 114: {fileID: 11409902}
   - 114: {fileID: 11485338}
+  - 114: {fileID: 11453860}
   m_Layer: 0
   m_Name: LevelSpawner
   m_TagString: Untagged
@@ -98,8 +99,28 @@ MonoBehaviour:
   key: third
   obstacles:
   - {fileID: 103614, guid: 027b76bbe15ad4147a278b39835c9e66, type: 2}
-  - {fileID: 103614, guid: 027b76bbe15ad4147a278b39835c9e66, type: 2}
+  - {fileID: 146896, guid: 5ca2877a93028224caa137a84dd54353, type: 2}
   - {fileID: 107362, guid: 9e209fc8e83c84743b3bdc6e13a80477, type: 2}
+  - {fileID: 131452, guid: 52d69b0efdfa51d4ab637d7df6293bb7, type: 2}
+--- !u!114 &11453860
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f89378e3ae3db246bee2d800d69f5b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: seventh
+  obstacles:
+  - {fileID: 151166, guid: 651368f7bbd1c584f882189d240a7fbd, type: 2}
+  - {fileID: 167000, guid: 4db4060078b637e439e50d02c6e7387c, type: 2}
+  - {fileID: 103614, guid: 027b76bbe15ad4147a278b39835c9e66, type: 2}
+  - {fileID: 146896, guid: 5ca2877a93028224caa137a84dd54353, type: 2}
+  - {fileID: 107362, guid: 9e209fc8e83c84743b3bdc6e13a80477, type: 2}
+  - {fileID: 0}
 --- !u!114 &11467184
 MonoBehaviour:
   m_ObjectHideFlags: 1

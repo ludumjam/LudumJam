@@ -681,12 +681,12 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 111046}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 50a0a4dbbf15834448425386b349191f, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 1.85, y: -0.00583148}
+  m_Offset: {x: 1.3, y: -0.00583148}
   serializedVersion: 2
   m_Size: {x: 5.12, y: 1.2505097}
 --- !u!82 &8208644
@@ -1395,7 +1395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c43ae630f831e2247aa44711c12baaf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: {x: 1.5, y: 0}
+  offset: {x: 1.4, y: 0}
   rb: {fileID: 5077180}
 --- !u!114 &11428174
 MonoBehaviour:
@@ -1409,11 +1409,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldownTime: 3
-  duration: 0.4
+  duration: 0.5
   ability: {fileID: 8300000, guid: 3c11a3d44e7771d4d8efac7cff98ab2a, type: 3}
   audio2: {fileID: 8280008}
   particleSystem: {fileID: 19826992}
   numParticles: 100
+  laserSize: {x: 0.9, y: 0.9}
 --- !u!114 &11429028
 MonoBehaviour:
   m_ObjectHideFlags: 1
