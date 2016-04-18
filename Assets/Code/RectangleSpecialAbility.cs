@@ -9,6 +9,7 @@ public class RectangleSpecialAbility : MonoBehaviour, ISpecialAbility {
 	public AudioSource audio2;
     public ParticleSystem particleSystem;
     public int numParticles = 100;
+    public Vector2 laserSize = new Vector2(0.8f, 0.8f);
 
     private float timeSinceLastUse = 0f;
     private float yVelocity;
@@ -44,7 +45,7 @@ public class RectangleSpecialAbility : MonoBehaviour, ISpecialAbility {
         }
         if (isActive) {
 			
-            RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.right);
+            RaycastHit2D hitInfo = Physics2D.BoxCast(transform.position, laserSize, 0f, transform.right);
             if (hitInfo.rigidbody != null) {
                 Destroy(hitInfo.rigidbody.gameObject);
             }
