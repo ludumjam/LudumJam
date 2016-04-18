@@ -10,7 +10,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: The Magensa Group
-  productName: Shifty Shades of Grey
+  productName: Shifty Shapes of Grey
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_ShowUnitySplashScreen: 1
@@ -85,10 +85,10 @@ PlayerSettings:
   wiiUControllerCount: 0
   m_SupportedAspectRatios:
     4:3: 0
-    5:4: 0
+    5:4: 1
     16:10: 0
     16:9: 0
-    Others: 1
+    Others: 0
   bundleIdentifier: com.Company.ProductName
   bundleVersion: 1.0
   preloadedAssets: []
@@ -168,7 +168,7 @@ PlayerSettings:
     height: 180
     banner: {fileID: 0}
   androidGamepadSupportLevel: 0
-  resolutionDialogBanner: {fileID: 2800000, guid: f2020c7ee1d14564dadba48882a4deba,
+  resolutionDialogBanner: {fileID: 2800000, guid: b21bad321ae13cb4cafbd5fc3880348e,
     type: 3}
   m_BuildTargetIcons:
   - m_BuildTarget: 
