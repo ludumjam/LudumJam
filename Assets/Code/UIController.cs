@@ -11,7 +11,8 @@ public class UIController : MonoBehaviour
     public Text distanceText;
     public Image[] shapes;
     public Character character;
-	public Image[] highlights;
+    public Image[] highlights;
+    private bool isGameOver = false;
 
     // Use this for initialization
     void Start()
@@ -20,7 +21,7 @@ public class UIController : MonoBehaviour
         CameraFollow.OnPlayerWentOutsideScreen += HandleOnDeathEvent;
         retryButton.onClick.AddListener(HandleRetryButtonOnClick);
         Character.OnPlayerShapeShift += HandleShapeShiftEvent;
-    
+        isGameOver = false;
     }
 
     void HandleShapeShiftEvent(int index, int previousIndex)
@@ -35,6 +36,10 @@ public class UIController : MonoBehaviour
         {
             shapes[i].fillAmount = Mathf.Clamp(character.children[i].GetComponent<ISpecialAbility>().CoolDown, 0f, 1f);
         }
+        if (isGameOver && (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl)))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 
     void FixedUpdate()
@@ -45,6 +50,7 @@ public class UIController : MonoBehaviour
     void HandleOnDeathEvent()
     {
         gameOverPanel.SetActive(true);
+        isGameOver = true;
     }
 
     void HandleRetryButtonOnClick()
