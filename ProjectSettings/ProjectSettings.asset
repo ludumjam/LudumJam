@@ -9,14 +9,14 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: LudumJam1
+  companyName: The Magensa Group
+  productName: Shifty Shades of Grey
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_ShowUnitySplashScreen: 1
   m_VirtualRealitySplashScreen: {fileID: 0}
-  defaultScreenWidth: 1024
-  defaultScreenHeight: 768
+  defaultScreenWidth: 405
+  defaultScreenHeight: 720
   defaultScreenWidthWeb: 405
   defaultScreenHeightWeb: 720
   m_RenderingPath: 1
@@ -37,7 +37,7 @@ PlayerSettings:
   useOSAutorotation: 1
   use32BitDisplayBuffer: 1
   disableDepthAndStencilBuffers: 0
-  defaultIsFullScreen: 1
+  defaultIsFullScreen: 0
   defaultIsNativeResolution: 1
   runInBackground: 0
   captureSingleScreen: 0
@@ -45,7 +45,7 @@ PlayerSettings:
   Prepare IOS For Recording: 0
   submitAnalytics: 1
   usePlayerLog: 1
-  bakeCollisionMeshes: 0
+  bakeCollisionMeshes: 1
   forceSingleInstance: 0
   resizableWindow: 0
   useMacAppStoreValidation: 0
@@ -84,10 +84,10 @@ PlayerSettings:
   wiiUAllowScreenCapture: 1
   wiiUControllerCount: 0
   m_SupportedAspectRatios:
-    4:3: 1
-    5:4: 1
-    16:10: 1
-    16:9: 1
+    4:3: 0
+    5:4: 0
+    16:10: 0
+    16:9: 0
     Others: 1
   bundleIdentifier: com.Company.ProductName
   bundleVersion: 1.0
@@ -111,7 +111,7 @@ PlayerSettings:
   CreateWallpaper: 0
   APKExpansionFiles: 0
   preloadShaders: 0
-  StripUnusedMeshComponents: 0
+  StripUnusedMeshComponents: 1
   VertexChannelCompressionMask:
     serializedVersion: 2
     m_Bits: 238
@@ -168,12 +168,13 @@ PlayerSettings:
     height: 180
     banner: {fileID: 0}
   androidGamepadSupportLevel: 0
-  resolutionDialogBanner: {fileID: 0}
+  resolutionDialogBanner: {fileID: 2800000, guid: f2020c7ee1d14564dadba48882a4deba,
+    type: 3}
   m_BuildTargetIcons:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 0}
+      m_Icon: {fileID: 2800000, guid: 315f3c0a2082ecb41b8a0dd10cc303dc, type: 3}
       m_Width: 128
       m_Height: 128
   m_BuildTargetBatching: []
@@ -427,7 +428,7 @@ PlayerSettings:
   Standalone::ScriptingBackend: 0
   WebGL::ScriptingBackend: 1
   WebGL::audioCompressionFormat: 4
-  WebGL::exceptionSupport: 1
+  WebGL::exceptionSupport: 0
   WebGL::memorySize: 256
   WebPlayer::ScriptingBackend: 0
   boolPropertyNames:
@@ -436,7 +437,7 @@ PlayerSettings:
   - WebGL::useEmbeddedResources
   - XboxOne::enus
   WebGL::analyzeBuildSize: 0
-  WebGL::dataCaching: 0
+  WebGL::dataCaching: 1
   WebGL::useEmbeddedResources: 0
   XboxOne::enus: 1
   stringPropertyNames:
