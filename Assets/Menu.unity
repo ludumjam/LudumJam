@@ -2366,7 +2366,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Shifty Shapes Grey
+  m_Text: Shifty Shapes of Grey
 --- !u!222 &1277203971
 CanvasRenderer:
   m_ObjectHideFlags: 0
